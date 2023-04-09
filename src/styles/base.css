@@ -1,0 +1,16 @@
+:root {
+	font-size: 63.5%;
+}
+
+* { 
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antiliased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 1.6rem;
+}

@@ -1,0 +1,150 @@
+:root{
+	--primary-text: #f5f5f5;
+	--secundary-text: #d3d3d3;
+	--secundary-text-low-opacity: #d3d3d32c;
+	--purple-base: #300e4b;
+	--finish-button: #80dfa0;
+	--edit-button: #d9df80;
+	--delete-button: #ff5f5f;
+	--background-todo: url(/src/assets/background.png);
+}
+
+body {
+	background-image: url(/src/assets/background.png);
+	background-position: center;
+	background-size: cover;	 
+	background-repeat: no-repeat;
+	color: var(--primary-text);
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.todo-container {
+	max-width: 90%;
+	background-position: center;
+	background-size: cover; 
+	background-repeat: no-repeat;
+
+	box-shadow: 0px 0px 137px -40px rgba(0, 0, 0, 0.75);
+	
+	padding: 3rem;
+	margin-bottom: 10rem;
+	border-radius: 2rem;
+}
+
+header h1 {
+	text-align: center;
+	font-size: 200%;
+	padding: 0 0 2rem;
+	border-bottom: solid 0.1rem var(--secundary-text);
+}
+
+#todo-form,
+#edit-form,
+#toolbar {
+	padding: 1rem 0 2rem;
+	border-bottom: solid 0.1rem var(--secundary-text);
+}
+
+#toolbar {
+	padding: 2rem 0 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	padding: .5rem 1rem;
+}
+
+button {
+	width: 4rem;
+	height: 2.8rem;
+}
+
+p{
+	padding: 1rem 0;
+}
+
+h4 {
+	padding-bottom: 1.5rem;
+}
+
+#cancel-edit-btn {
+	width: 7rem;
+}
+
+#filter {
+	width: 10rem;
+}
+
+#filter-select {
+	width: 100%;
+	padding: .5rem 1rem;
+}
+
+#todo-list {
+	gap: 1rem;
+	padding-top: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.todo {
+	align-items: center;
+	display: flex;
+	gap: 3rem;
+	padding: .5rem;
+	background-color: var(	--secundary-text-low-opacity);
+	justify-content: space-between;
+}
+
+.todo h3 {
+	max-width: calc(100% - 18rem);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.finish-todo,
+.delete-todo,
+.edit-todo {
+	border-radius: .5rem;
+	background: none;
+	cursor: pointer;
+}
+
+.finish-todo {
+	border: 3px solid var(--finish-button);
+}
+.edit-todo {
+	border: 3px solid var(--edit-button);
+}
+.delete-todo {
+	border: 3px solid var(--delete-button);
+}
+
+.finish-todo i {
+	color: var(--finish-button);
+}
+.edit-todo i {
+	color: var(--edit-button);
+}
+.delete-todo i {
+	color: var(--delete-button);
+}
+
+.finish-todo:hover {
+	background-color: var(--finish-button);
+}
+.edit-todo:hover {
+	background-color: var(--edit-button);
+}
+.delete-todo:hover {
+	background-color: var(--delete-button);
+}
