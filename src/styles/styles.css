@@ -26,7 +26,7 @@ main {
 }
 
 .todo-container {
-	max-width: 90%;
+	width: 35vw;
 	background-position: center;
 	background-size: cover; 
 	background-repeat: no-repeat;
@@ -96,16 +96,23 @@ h4 {
 }
 
 .todo {
+	display: flex;
+	justify-content: space-around;
 	align-items: center;
+	padding: 1rem solid white;
+	transition: .3s;
+
+	/* align-items: center;
 	display: flex;
 	gap: 3rem;
 	padding: .5rem;
 	background-color: var(	--secundary-text-low-opacity);
-	justify-content: space-between;
+	justify-content: space-between; */
 }
 
 .todo h3 {
-	max-width: calc(100% - 18rem);
+	flex: 1;
+	/* max-width: calc(100% - 18rem); */
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -117,6 +124,7 @@ h4 {
 	border-radius: .5rem;
 	background: none;
 	cursor: pointer;
+	margin-left: 1rem;
 }
 
 .finish-todo {
