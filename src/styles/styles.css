@@ -25,6 +25,14 @@ main {
 	justify-content: center;
 }
 
+.hide {
+	display: none;
+}
+
+#first{
+	display: none;
+}
+
 .todo-container {
 	width: 35vw ;
 	background-position: center;
