@@ -31,6 +31,10 @@ const saveTodo = (text) => {
 	todo.appendChild(deleteBtn);
 
 	todoList.appendChild(todo);
+
+	todoInput.value = '';
+	todoInput.focus();
+
 }
 
 // Eventos
@@ -42,4 +46,22 @@ todoForm.addEventListener("submit", (e) => {
 	if (inputValue) {
 		saveTodo(inputValue)
 	}
-})
+});
+
+document.addEventListener("click", (e) => {
+	const targetEl = e.target;
+	const parentEl = e.target.closest("div");
+
+
+	if(targetEl.classList.contains("finish-todo")){
+		parentEl.classList.toggle("done")
+	}
+
+	if(targetEl.classList.contains("delete-todo")){
+		parentEl.remove()
+	}
+
+	if(targetEl.classList.contains("edit-todo")){
+		console.log("editou")
+	}
+});
