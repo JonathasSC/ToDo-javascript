@@ -1,16 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
 :root {
 	font-size: 63.5%;
+
+	/* Neutras */
+	--white: #f7f7f7;
+	--black: #222222;
+	
+	--primary-text: #0057a8;
+	--primary-text-hover: #014585;
+	--secundary-text: rgb(117, 117, 117);
+	--bg-color: #31acff;
+	--secundary-text-low-opacity: #d3d3d32c;
+	--purple-base: #300e4b;
+	--finish: #87fd70;
+	--edit: #f4fd70;
+	--delete: #fd7070;
+	--finish-hover: #70e459;
+	--edit-hover: #e2ec4e;
+	--delete-hover: #e46f6f;
 }
 
-* { 
-	font-family: Helvetica, sans-serif;
+* {
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto Mono', monospace;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antiliased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
+	overflow-y: hidden;
 	font-size: 1.6rem;
+	color: var(--primary-text);
 }

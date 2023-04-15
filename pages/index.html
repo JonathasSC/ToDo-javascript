@@ -7,20 +7,26 @@
 	<link href="/src/styles/base.css" rel="stylesheet">
 	<link href="/src/styles/styles.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	
 	<title>ToDo JS</title>
 </head>
 <body>
+	<header>
+		<nav>
+			<h3 class="title-header">
+				ToDo.Js
+			</h3>
+		</nav>
+	</header>
 	<main>
 		<div class="todo-container">
-			<header>
-				<h1>ToDo JavaScript</h1>
-			</header>
-
 			<form id="todo-form">
 				<p>Adicione a sua tarefa.</p>
 				<div class="form-control">
 					<input type="text" id="todo-input" placeholder="O que você vai fazer?">
-					<button type="submit">
+					<button class="submit-button" type="submit">
 						<i class="fa-thin fa-plus"></i>
 					</button>
 				</div>
@@ -30,8 +36,10 @@
 				<p>Edite sua tarefa:</p>
 				<div class="form-control">
 					<input type="text" id="edit-input">
-					<button type="submit">
-						<i class="fa-solid fa-check-double"></i>
+					<button type="submit" class="edit-button">
+						<span class="material-symbols-outlined">
+							check
+						</span>
 					</button>
 				</div>
 				<button id="cancel-edit-btn">Cancelar</button>
@@ -40,14 +48,10 @@
 			<div id="todo-list">
 				<div class="todo" id="first">
 					<h3>Estudar JavaScript</h3>
-					<button class="finish-todo">
-						<i class="fa-solid fa-check"></i>
-					</button>
+					<button class="finish-todo"></button>
 					<button class="edit-todo">
-						<i class="fa-solid fa-pen"></i>
 					</button>
 					<button class="delete-todo">
-						<i class="fa-solid fa-xmark"></i>
 					</button>
 				</div>
 			</div>
