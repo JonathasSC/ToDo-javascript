@@ -1,16 +1,16 @@
 /* Classes fantasmas */
 
 .done {
-	opacity: 50%;
-	background-color: #00000046;
+	background-color: #0000001f;
 }
 
 .done h3 {
+	opacity: 50%;
 	text-decoration: line-through;
-	color: #818181;
 }
 
-.hide,#first {
+.hide,
+#first {
 	display: none;
 }
 
@@ -57,10 +57,20 @@ main {
 	border-radius: 2rem;
 }
 
-#todo-form,
 #edit-form,
 #toolbar {
 	padding: 1rem 0 2rem;
+}
+
+#todo-form {
+	padding-bottom: 2rem;
+} 
+
+#todo-form h4,
+#edit-form h4 {
+	font-weight: bold;
+	font-size: 18pt;
+	padding-bottom: 1rem;
 }
 
 .form-control {
@@ -101,7 +111,8 @@ main {
 	height: 3.2rem;
 }
 
-.submit-button:hover{
+.submit-button:hover,
+.edit-button:hover{
 	background-color: var(--primary-text-hover);
 }
 
@@ -134,10 +145,6 @@ p{
 	padding: 1rem 0;
 }
 
-h4 {
-	padding-bottom: 1.5rem;
-}
-
 #cancel-edit-btn {
 	width: 7rem;
 }
@@ -161,13 +168,13 @@ h4 {
 	justify-content: space-around;
 	align-items: center;
 	transition: .3s;
-	border-bottom: 1px solid var(--secundary-text);
 	padding: 1.2rem 1rem;
+	animation: slide .5s ease-in-out;
 }
+
 
 .todo h3 {
 	flex: 1;
-	/* max-width: calc(100% - 18rem); */
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -180,6 +187,23 @@ h4 {
 	background: none;
 	cursor: pointer;
 	margin-left: 1rem;
+}
+
+#cancel-edit-btn {
+	background-color: var(--primary-text);
+	border-radius: .5rem;
+
+	font-weight: bold;
+	color: var(--white);
+
+	border: none;
+	width: 10rem;
+	margin-top: 1rem;
+	height: 3rem;
+}
+
+#cancel-edit-btn:hover {
+	background-color: var(--primary-text-hover);
 }
 
 .finish-todo {
@@ -211,5 +235,12 @@ h4 {
 	background-color: var(--delete-hover);
 }
 
-
-
+@keyframes slide {
+	from {
+		opacity: 0%;
+		transform: translateX(20%);
+	}
+	to {
+		opacity: 100%;
+	}
+}
